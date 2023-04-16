@@ -1,0 +1,122 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(website\ 1.png);
+    font-family: 'Sniglet', cursive;
+    background-size: cover;
+}
+
+.birthdayCard {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: 4s;
+}
+
+.birthdayCard:hover {
+    transform: perspective(2500px) rotate(5deg);
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .15), 0 10px 100px rgba(0, 0, 0, 0.3);
+}
+
+.birthdayCard:hover .cardFront {
+    transform: rotateY(-160deg);
+}
+
+.birthdayCard:hover .front-text {
+    display: none;
+}
+
+.birthdayCard:hover .wrap-deco {
+    display: none;
+}
+
+.birthdayCard:hover .wrap-decoTwo {
+    display: none;
+}
+
+.birthdayCard:hover .plate {
+    display: none;
+}
+
+.cardFront {
+    position: relative;
+    background-color: #fff;
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    transform-origin: left;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .13), 30px 0 50px rgba(0, 0, 0, 0.1);
+    transition: .4s;
+}
+
+.cardFront img {
+    height: 100%;
+    width: 100%;
+}
+
+.happy,
+.toyou {
+    position: relative;
+    text-align: center;
+    backface-visibility: hidden;
+    font-size: 30px;
+}
+
+.happy {
+    top: 198px;
+    color: rgb(42, 204, 188);
+}
+
+.toyou {
+    top: 123px;
+    font-family: 'Happy Monkey', cursive;
+    color: rgb(42, 204, 188);
+}
+
+.bday {
+    position: relative;
+    font-family: arial;
+    font-size: 35px;
+    text-align: center;
+    top: 163px;
+    font-family: 'Sniglet', cursive;
+    color: tomato;
+}
+
+.cardInside {
+    position: absolute;
+    background-color: #fff;
+    width: 250px;
+    height: 350px;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2);
+}
+
+.cake {
+    position: relative;
+    top: -40px;
+    transform: scale(0.5);
+}
+
+.wishes {
+    position: relative;
+    top: -100px;
+    margin: 0 15px 25px 25px;
+}
+
+p {
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.name {
+    margin-left: 150px;
+}
